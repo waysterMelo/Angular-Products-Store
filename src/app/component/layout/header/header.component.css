@@ -1,0 +1,8 @@
+header{
+  height: 400px;
+  background-image: url("../../../../assets/images/blake-wisz-tE6th1h6Bfk-unsplash.jpg");
+  filter: contrast(120%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

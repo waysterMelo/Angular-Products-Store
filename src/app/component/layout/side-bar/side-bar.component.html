@@ -1,0 +1,10 @@
+<div class="card bg-dark text-white font-weight-bold">
+	<article class="card-group-item">
+		<header class="card-header" ><h6 class="title">Categories</h6></header>
+		<div class="filter-content" *ngFor="let catg of categoryList">
+			<div class="list-group list-group-flush" >
+			  <a href="category/{{catg}}" class="list-group-item list-group-item-dark card-link">{{catg}}</a>
+      </div>
+     </div>
+</article>
+</div>

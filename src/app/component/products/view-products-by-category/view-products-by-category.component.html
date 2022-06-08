@@ -1,0 +1,42 @@
+<app-header></app-header>
+<section class="py-5" id="products">
+  <div class="container-fluid row my-5">
+    <div class="col-md-3">
+<app-side-bar></app-side-bar>
+    </div>
+    <div class="col-md-8">
+
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+        <div class="col mb-5" *ngFor="let item of productList">
+          <div class="card h-100 border-0">
+            <!-- Product image-->
+            <img class="card-img-top" src="{{item.thumbnail}}" alt="{{item.title}}">
+            <!-- Product details-->
+            <div class="card-body p-4 bg-light">
+              <div class="text-center">
+                <!-- Product name-->
+                <a [routerLink]="['/view-product', item.id]" class="fw-bolder card-link">{{item.title}}</a><br>
+                <!-- Product price-->
+                ${{item.price}}
+              </div>
+              <div class="mt-2 card-footer text-center text-capitalize">
+                {{item.brand}}
+              </div>
+            </div>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center">
+                <a class="btn btn-primary mx-2" [routerLink]="['/view-product', item.id]">Ver detalhes</a>
+                <button class="btn btn-danger" type="button">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>

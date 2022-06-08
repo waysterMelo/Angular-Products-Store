@@ -1,0 +1,88 @@
+
+<div class="container-fluid py-5" id="initial-header">
+  <div class="row gx-5 justify-content-center pt-5">
+    <div class="col-lg-6">
+      <div class="text-center my-5">
+        <h1 class="display-3 mb-2 py-5 font-weight-bold">Present your business in a whole new way</h1>
+        <p class="mb-4 h3">Lorem ipsum, dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet.</p>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center pt-4">
+          <a class="btn btn-outline-secondary btn-lg px-4 me-sm-3 mx-2" href="products">View Products</a>
+          <a class="btn btn-outline-secondary btn-lg px-4" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="py-5 border-bottom my-5" id="features">
+  <div class="container px-5 my-5">
+    <div class="row gx-5">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="feature text-white rounded-3 mb-3"><img src="../../../../assets/images/cash_register_48px.png" alt=""></div>
+        <h2 class="h4 fw-bolder">Featured title</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a class="text-decoration-none btn-dark btn" href="#">
+          Call to action
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="feature text-white rounded-3 mb-3"><img src="../../../../assets/images/free_shipping_48px.png" alt=""></div>
+        <h2 class="h4 fw-bolder">Featured title</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a class="text-decoration-none  btn-dark btn" href="#">
+          Call to action
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature text-white rounded-3 mb-3"><img src="../../../../assets/images/online_payment_48px.png" alt=""></div>
+        <h2 class="h4 fw-bolder">Featured title</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a class="text-decoration-none  btn-dark btn" href="#">
+          Call to action
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container-fluid py-5" id="someProducts">
+  <div class="row justify-content-center">
+    <div class="py-5 text-center">
+      <h1 class="">Some Products that you'll beloved</h1><br>
+      <span>😍</span>
+    </div>
+    <div class="col-lg-10 col-md-10 mt-4">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div class="col mb-5" *ngFor="let item of productList">
+          <div class="card h-100">
+            <!-- Product image-->
+            <img class="card-img-top" src="{{item.thumbnail}}" alt="{{item.title}}">
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <a [routerLink]="['view-product', item.id]" class="nav-item">{{item.title}}</a> <br>
+                <!-- Product price-->
+                ${{item.price}}
+              </div>
+              <div class="mt-2 card-footer text-center text-capitalize">
+                {{item.brand}}
+              </div>
+            </div>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center"><a class="btn-gradient btn text-white mt-auto"[routerLink]="['view-product', item.id]">Ver Detalhes</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-contact></app-contact>
